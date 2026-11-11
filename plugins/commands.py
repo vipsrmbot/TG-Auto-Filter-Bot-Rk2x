@@ -105,13 +105,12 @@ async def start(client, message):
             await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
         if len(message.command) != 2:
             buttons = [[
-                        InlineKeyboardButton('🔰 ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ 🔰', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+                        InlineKeyboardButton('⇄𝙰ᴅᴅ 𝙼ᴇ 𝚃ᴏ 𝚈ᴏᴜʀ 𝙶ʀᴏᴜᴘs⇄', url=f'http://t.me/{temp.U_NAME}?startgroup=true', style=enums.ButtonStyle.PRIMARY)
                     ],[
-                        InlineKeyboardButton(' ʜᴇʟᴘ 📢', callback_data='help'),
-                        InlineKeyboardButton(' ᴀʙᴏᴜᴛ 📖', callback_data='about')
+                        InlineKeyboardButton('⇉𝙳ᴇᴍᴏ 𝚂ᴇᴀʀᴄʜ⇇', callback_data='help', style=enums.ButtonStyle.DANGER),
+                        InlineKeyboardButton('⊵ 𝙰ʙᴏᴜᴛ ⊴', callback_data='about', style=enums.ButtonStyle.DANGER)
                     ],[
-                        InlineKeyboardButton('ᴛᴏᴘ sᴇᴀʀᴄʜɪɴɢ ⭐', callback_data="topsearch"),
-                        InlineKeyboardButton('ᴜᴘɢʀᴀᴅᴇ 🎟', callback_data="premium_info"),
+                        InlineKeyboardButton('⇌ 𝙼ᴏᴠɪᴇ 𝚁ᴇǫᴜᴇsᴛ 𝙶ʀᴏᴜᴘ ⇋', url="https://t.me/Rk2x_Request", style=enums.ButtonStyle.SUCCESS)
                     ]]
             reply_markup = InlineKeyboardMarkup(buttons)
             current_time = datetime.now(TZ)
@@ -148,13 +147,12 @@ async def start(client, message):
 
         if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
             buttons = [[
-                        InlineKeyboardButton('🔰 ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ 🔰', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+                        InlineKeyboardButton('⇄𝙰ᴅᴅ 𝙼ᴇ 𝚃ᴏ 𝚈ᴏᴜʀ 𝙶ʀᴏᴜᴘs⇄', url=f'http://t.me/{temp.U_NAME}?startgroup=true', style=enums.ButtonStyle.PRIMARY)
                     ],[
-                        InlineKeyboardButton(' ʜᴇʟᴘ 📢', callback_data='help'),
-                        InlineKeyboardButton(' ᴀʙᴏᴜᴛ 📖', callback_data='about')
+                        InlineKeyboardButton('⇉𝙳ᴇᴍᴏ 𝚂ᴇᴀʀᴄʜ⇇', callback_data='help', style=enums.ButtonStyle.DANGER),
+                        InlineKeyboardButton('⊵ 𝙰ʙᴏᴜᴛ ⊴', callback_data='about', style=enums.ButtonStyle.DANGER)
                     ],[
-                        InlineKeyboardButton('ᴛᴏᴘ sᴇᴀʀᴄʜɪɴɢ ⭐', callback_data="topsearch"),
-                        InlineKeyboardButton('ᴜᴘɢʀᴀᴅᴇ 🎟', callback_data="premium_info"),
+                        InlineKeyboardButton('⇌ 𝙼ᴏᴠɪᴇ 𝚁ᴇǫᴜᴇsᴛ 𝙶ʀᴏᴜᴘ ⇋', url="https://t.me/Rk2x_Request", style=enums.ButtonStyle.SUCCESS)
                     ]]
             reply_markup = InlineKeyboardMarkup(buttons)
             current_time = datetime.now(TZ)
