@@ -182,17 +182,17 @@ async def next_page(client, query):
         btn.insert(0,
                    [
                        InlineKeyboardButton(
-                           'Qᴜᴀʟɪᴛʏ', callback_data=f"qualities#{req}#{key}"),
+                           'Qᴜᴀʟɪᴛʏ', callback_data=f"qualities#{req}#{key}", style=enums.ButtonStyle.SUCCESS),
                        InlineKeyboardButton(
-                           "Lᴀɴɢᴜᴀɢᴇ", callback_data=f"languages#{req}#{key}"),
+                           "Lᴀɴɢᴜᴀɢᴇ", callback_data=f"languages#{req}#{key}", style=enums.ButtonStyle.DANGER),
                        InlineKeyboardButton(
-                           "Sᴇᴀsᴏɴ",  callback_data=f"seasons#{req}#{key}")
+                           "Sᴇᴀsᴏɴ",  callback_data=f"seasons#{req}#{key}", style=enums.ButtonStyle.PRIMARY)
                    ]
                    )
         btn.insert(0,
                    [
                        InlineKeyboardButton(
-                           "Sᴇɴᴅ Aʟʟ", callback_data=f"sendfiles#{key}", style=enums.ButtonStyle.SUCCESS)
+                           "Sᴇɴᴅ Aʟʟ", callback_data=f"sendfiles#{key}", style=enums.ButtonStyle.DANGER)
 
                    ]
                    )
@@ -202,15 +202,15 @@ async def next_page(client, query):
         btn.insert(0,
                    [
                        InlineKeyboardButton(
-                           'Qᴜᴀʟɪᴛʏ', callback_data=f"qualities#{req}#{key}"),
+                           'Qᴜᴀʟɪᴛʏ', callback_data=f"qualities#{req}#{key}", style=enums.ButtonStyle.SUCCESS),
                        InlineKeyboardButton(
-                           "Lᴀɴɢᴜᴀɢᴇ", callback_data=f"languages#{req}#{key}"),
+                           "Lᴀɴɢᴜᴀɢᴇ", callback_data=f"languages#{req}#{key}", style=enums.ButtonStyle.DANGER),
                        InlineKeyboardButton(
-                           "Sᴇᴀsᴏɴ",  callback_data=f"seasons#{req}#{key}")
+                           "Sᴇᴀsᴏɴ",  callback_data=f"seasons#{req}#{key}", style=enums.ButtonStyle.PRIMARY)
                    ]
                    )
         btn.insert(0, [
-            InlineKeyboardButton("Sᴇɴᴅ Aʟʟ", callback_data=f"sendfiles#{key}", style=enums.ButtonStyle.SUCCESS)
+            InlineKeyboardButton("Sᴇɴᴅ Aʟʟ", callback_data=f"sendfiles#{key}", style=enums.ButtonStyle.DANGER)
         ])
     if ULTRA_FAST_MODE:
         if 0 < offset <= 10:
@@ -406,7 +406,7 @@ async def qualities_cb_handler(client: Client, query: CallbackQuery):
         btn.append(row)
 
     btn.insert(0, [
-        InlineKeyboardButton(text="⇊ ꜱᴇʟᴇᴄᴛ ǫᴜᴀʟɪᴛʏ ⇊", callback_data="ident")
+        InlineKeyboardButton(text="⇊ ꜱᴇʟᴇᴄᴛ ǫᴜᴀʟɪᴛʏ ⇊", callback_data="ident", style=ButtonStyle.SUCCESS)
     ])
     btn.append([
         InlineKeyboardButton(text="↭ ʙᴀᴄᴋ ᴛᴏ ꜰɪʟᴇs ↭",
@@ -456,34 +456,34 @@ async def filter_qualities_cb_handler(client: Client, query: CallbackQuery):
         btn.insert(0,
                    [
                        InlineKeyboardButton(
-                           'Qᴜᴀʟɪᴛʏ', callback_data=f"qualities#{req}#{key}"),
+                           'Qᴜᴀʟɪᴛʏ', callback_data=f"qualities#{req}#{key}", style=ButtonStyle.SUCCESS),
                        InlineKeyboardButton(
-                           "Lᴀɴɢᴜᴀɢᴇ", callback_data=f"languages#{req}#{key}"),
+                           "Lᴀɴɢᴜᴀɢᴇ", callback_data=f"languages#{req}#{key}", style=enums.ButtonStyle.DANGER),
                        InlineKeyboardButton(
-                           "Sᴇᴀsᴏɴ",  callback_data=f"seasons#{req}#{key}")
+                           "Sᴇᴀsᴏɴ",  callback_data=f"seasons#{req}#{key}", style=enums.ButtonStyle.PRIMARY)
                    ]
                    )
         btn.insert(0,
                    [
                        InlineKeyboardButton(
-                           "Sᴇɴᴅ Aʟʟ", callback_data=f"sendfiles#{key}", style=enums.ButtonStyle.SUCCESS)
+                           "Sᴇɴᴅ Aʟʟ", callback_data=f"sendfiles#{key}", style=enums.ButtonStyle.DANGER)
                    ])
     else:
         btn = []
         btn.insert(0,
                    [
                        InlineKeyboardButton(
-                           'Qᴜᴀʟɪᴛʏ', callback_data=f"qualities#{req}#{key}"),
+                           'Qᴜᴀʟɪᴛʏ', callback_data=f"qualities#{req}#{key}", style=enums.ButtonStyle.SUCCESS),
                        InlineKeyboardButton(
-                           "Lᴀɴɢᴜᴀɢᴇ", callback_data=f"languages#{req}#{key}"),
+                           "Lᴀɴɢᴜᴀɢᴇ", callback_data=f"languages#{req}#{key}", style=enums.ButtonStyle.DANGER),
                        InlineKeyboardButton(
-                           "Sᴇᴀsᴏɴ",  callback_data=f"seasons#{req}#{key}")
+                           "Sᴇᴀsᴏɴ",  callback_data=f"seasons#{req}#{key}", style=enums.ButtonStyle.PRIMARY)
                    ]
                    )
         btn.insert(0,
                    [
                        InlineKeyboardButton(
-                           "Sᴇɴᴅ Aʟʟ", callback_data=f"sendfiles#{key}", style=enums.ButtonStyle.SUCCESS)
+                           "Sᴇɴᴅ Aʟʟ", callback_data=f"sendfiles#{key}", style=enums.ButtonStyle.DANGER)
 
                    ])
     if offset != "":
@@ -511,7 +511,7 @@ async def filter_qualities_cb_handler(client: Client, query: CallbackQuery):
         btn.append(
 
             [InlineKeyboardButton(
-                text="↭ ɴᴏ ᴍᴏʀᴇ ᴘᴀɢᴇꜱ ᴀᴠᴀɪʟᴀʙʟᴇ ↭", callback_data="pages")]
+                text="↭ ɴᴏ ᴍᴏʀᴇ ᴘᴀɢᴇꜱ ᴀᴠᴀɪʟᴀʙʟᴇ ↭", callback_data="pages", style=enums.ButtonStyle.DANGER)]
         )
     if not settings["button"]:
         cur_time = datetime.now(TZ).time()
@@ -610,17 +610,17 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
         btn.insert(0,
                    [
                        InlineKeyboardButton(
-                           'Qᴜᴀʟɪᴛʏ', callback_data=f"qualities#{req}#{key}"),
+                           'Qᴜᴀʟɪᴛʏ', callback_data=f"qualities#{req}#{key}", style=enums.ButtonStyle.SUCCESS),
                        InlineKeyboardButton(
-                           "Lᴀɴɢᴜᴀɢᴇ", callback_data=f"languages#{req}#{key}"),
+                           "Lᴀɴɢᴜᴀɢᴇ", callback_data=f"languages#{req}#{key}", style=enums.ButtonStyle.DANGER),
                        InlineKeyboardButton(
-                           "Sᴇᴀsᴏɴ",  callback_data=f"seasons#{req}#{key}")
+                           "Sᴇᴀsᴏɴ",  callback_data=f"seasons#{req}#{key}", style=enums.ButtonStyle.PRIMARY)
                    ]
                    )
         btn.insert(0,
                    [
                        InlineKeyboardButton(
-                           "Sᴇɴᴅ Aʟʟ", callback_data=f"sendfiles#{key}", style=enums.ButtonStyle.SUCCESS)
+                           "Sᴇɴᴅ Aʟʟ", callback_data=f"sendfiles#{key}", style=enums.ButtonStyle.DANGER)
                    ]
                    )
     else:
@@ -628,16 +628,16 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
         btn.insert(0,
                    [
                        InlineKeyboardButton(
-                           'Qᴜᴀʟɪᴛʏ', callback_data=f"qualities#{req}#{key}"),
+                           'Qᴜᴀʟɪᴛʏ', callback_data=f"qualities#{req}#{key}", style=enums.ButtonStyle.SUCCESS),
                        InlineKeyboardButton(
-                           "Lᴀɴɢᴜᴀɢᴇ", callback_data=f"languages#{req}#{key}"),
+                           "Lᴀɴɢᴜᴀɢᴇ", callback_data=f"languages#{req}#{key}", style=enums.ButtonStyle.DANGER),
                        InlineKeyboardButton(
-                           "Sᴇᴀsᴏɴ",  callback_data=f"seasons#{req}#{key}")
+                           "Sᴇᴀsᴏɴ",  callback_data=f"seasons#{req}#{key}", style=enums.ButtonStyle.PRIMARY)
                    ])
         btn.insert(0,
                    [
                        InlineKeyboardButton(
-                           "Sᴇɴᴅ Aʟʟ", callback_data=f"sendfiles#{key}", style=enums.ButtonStyle.SUCCESS)
+                           "Sᴇɴᴅ Aʟʟ", callback_data=f"sendfiles#{key}", style=enums.ButtonStyle.DANGER)
                    ])
     if offset != "":
         try:
@@ -762,15 +762,15 @@ async def filter_seasons_cb_handler(client: Client, query: CallbackQuery):
     btn.insert(
         0,
         [
-            InlineKeyboardButton("Qᴜᴀʟɪᴛʏ", callback_data=f"qualities#{req}#{key}"),
-            InlineKeyboardButton("Lᴀɴɢᴜᴀɢᴇ", callback_data=f"languages#{req}#{key}"),
-            InlineKeyboardButton("Sᴇᴀꜱᴏɴ", callback_data=f"seasons#{req}#{key}"),
+            InlineKeyboardButton("Qᴜᴀʟɪᴛʏ", callback_data=f"qualities#{req}#{key}", style=enums.ButtonStyle.SUCCESS),
+            InlineKeyboardButton("Lᴀɴɢᴜᴀɢᴇ", callback_data=f"languages#{req}#{key}", style=enums.ButtonStyle.DANGER),
+            InlineKeyboardButton("Sᴇᴀꜱᴏɴ", callback_data=f"seasons#{req}#{key}", style=enums.ButtonStyle.PRIMARY),
         ],
     )
     btn.insert(
         0,
         [
-            InlineKeyboardButton("Sᴇɴᴅ Aʟʟ", callback_data=f"sendfiles#{key}", style=enums.ButtonStyle.SUCCESS),
+            InlineKeyboardButton("Sᴇɴᴅ Aʟʟ", callback_data=f"sendfiles#{key}", style=enums.ButtonStyle.DANGER),
         ],
     )
     if n_offset != "":
@@ -796,7 +796,7 @@ async def filter_seasons_cb_handler(client: Client, query: CallbackQuery):
         n_offset = 0
         btn.append(
             [InlineKeyboardButton(
-                "↭  ɴᴏ ᴍᴏʀᴇ ᴘᴀɢᴇꜱ ᴀᴠᴀɪʟᴀʙʟᴇ ↭", callback_data="pages")]
+                "↭  ɴᴏ ᴍᴏʀᴇ ᴘᴀɢᴇꜱ ᴀᴠᴀɪʟᴀʙʟᴇ ↭", callback_data="pages", style=enums.ButtonStyle.DANGER)]
         )
     if not settings.get("button"):
         time_difference = datetime.now(TZ) - start_t
@@ -1238,9 +1238,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "about":
         buttons = [[
-            InlineKeyboardButton('‼️ ᴅɪꜱᴄʟᴀɪᴍᴇʀ ‼️', callback_data='disclaimer'),
+            InlineKeyboardButton('‼️ ᴅɪꜱᴄʟᴀɪᴍᴇʀ ‼️', callback_data='disclaimer', style=enums.ButtonStyle.DANGER),
         ],[
-            InlineKeyboardButton('⇋ ʙᴀᴄᴋ ᴛᴏ ʜᴏᴍᴇ ⇋', callback_data='start')
+            InlineKeyboardButton('⇋ ʙᴀᴄᴋ ᴛᴏ ʜᴏᴍᴇ ⇋', callback_data='start', style=enums.ButtonStyle.SUCCESS)
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -1502,17 +1502,17 @@ async def auto_filter(client, msg, spoll=False):
             btn.insert(0,
                        [
                            InlineKeyboardButton(
-                               'Qᴜᴀʟɪᴛʏ', callback_data=f"qualities#{req}#{key}"),
+                               'Qᴜᴀʟɪᴛʏ', callback_data=f"qualities#{req}#{key}", style=enums.ButtonStyle.SUCCESS),
                            InlineKeyboardButton(
-                               "Lᴀɴɢᴜᴀɢᴇ", callback_data=f"languages#{req}#{key}"),
+                               "Lᴀɴɢᴜᴀɢᴇ", callback_data=f"languages#{req}#{key}", style=enums.ButtonStyle.DANGER),
                            InlineKeyboardButton(
-                               "Sᴇᴀsᴏɴ",  callback_data=f"seasons#{req}#{key}")
+                               "Sᴇᴀsᴏɴ",  callback_data=f"seasons#{req}#{key}", style=enums.ButtonStyle.PRIMARY)
                        ]
                        )
             btn.insert(0,
                        [
                            InlineKeyboardButton(
-                               "Sᴇɴᴅ Aʟʟ", callback_data=f"sendfiles#{key}", style=enums.ButtonStyle.SUCCESS)
+                               "Sᴇɴᴅ Aʟʟ", callback_data=f"sendfiles#{key}", style=enums.ButtonStyle.DANGER)
 
                        ])
         else:
@@ -1520,17 +1520,17 @@ async def auto_filter(client, msg, spoll=False):
             btn.insert(0,
                        [
                            InlineKeyboardButton(
-                               'Qᴜᴀʟɪᴛʏ', callback_data=f"qualities#{req}#{key}"),
+                               'Qᴜᴀʟɪᴛʏ', callback_data=f"qualities#{req}#{key}", style=enums.ButtonStyle.SUCCESS),
                            InlineKeyboardButton(
-                               "Lᴀɴɢᴜᴀɢᴇ", callback_data=f"languages#{req}#{key}"),
+                               "Lᴀɴɢᴜᴀɢᴇ", callback_data=f"languages#{req}#{key}", style=enums.ButtonStyle.DANGER),
                            InlineKeyboardButton(
-                               "Sᴇᴀsᴏɴ",  callback_data=f"seasons#{req}#{key}")
+                               "Sᴇᴀsᴏɴ",  callback_data=f"seasons#{req}#{key}", style=enums.ButtonStyle.PRIMARY)
                        ]
                        )
             btn.insert(0,
                        [
                            InlineKeyboardButton(
-                               "Sᴇɴᴅ Aʟʟ", callback_data=f"sendfiles#{key}", style=enums.ButtonStyle.SUCCESS)
+                               "Sᴇɴᴅ Aʟʟ", callback_data=f"sendfiles#{key}", style=enums.ButtonStyle.DANGER)
                        ])
 
         if offset != "":
@@ -1560,7 +1560,7 @@ async def auto_filter(client, msg, spoll=False):
                     )
         else:
             btn.append([InlineKeyboardButton(
-                text="↭ ɴᴏ ᴍᴏʀᴇ ᴘᴀɢᴇꜱ ᴀᴠᴀɪʟᴀʙʟᴇ ↭", callback_data="pages")])
+                text="↭ ɴᴏ ᴍᴏʀᴇ ᴘᴀɢᴇꜱ ᴀᴠᴀɪʟᴀʙʟᴇ ↭", callback_data="pages", style=enums.ButtonStyle.DANGER)])
 
         if settings.get('imdb'):
             imdb = await get_posterx(search, file=(files[0]).file_name) if TMDB_POSTER else await get_poster(search, file=(files[0]).file_name)
@@ -1721,9 +1721,9 @@ async def advantage_spell_chok(client, message):
     if not movies:
         google = quote_plus(search)
         button = [[InlineKeyboardButton(
-            "🔎 ᴄʜᴇᴄᴋ sᴘᴇʟʟɪɴɢ ᴏɴ ɢᴏᴏɢʟᴇ 🔍", url=f"https://www.google.com/search?q={google}"),
+            "🔎 ᴄʜᴇᴄᴋ sᴘᴇʟʟɪɴɢ ᴏɴ ɢᴏᴏɢʟᴇ 🔍", url=f"https://www.google.com/search?q={google}", style=enums.ButtonStyle.PRIMARY),
           ],[
-               InlineKeyboardButton("ᴄᴏɴᴛᴀᴄᴛ ᴀᴅᴍɪɴ", url=f"https://t.me/NotRk2xBot")]]
+               InlineKeyboardButton("ᴄᴏɴᴛᴀᴄᴛ ᴀᴅᴍɪɴ", url=f"https://t.me/NotRk2xBot", style=enums.ButtonStyle.SUCCESS)]]
         k = await message.reply_text(text=script.I_CUDNT.format(search), reply_markup=InlineKeyboardMarkup(button))
         await asyncio.sleep(60)
         try:
