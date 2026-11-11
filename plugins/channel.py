@@ -361,12 +361,10 @@ async def send_movie_update(client, base_name):
                 return None
 
             text = generate_movie_message(movie_doc, base_name)
-            buttons = InlineKeyboardMarkup([[
-                InlineKeyboardButton(
-                    'ɢᴇᴛ ғɪʟᴇs',
-                    url=f"https://t.me/{temp.U_NAME}?start=getfile-{base_name.replace(' ', '-')}"
-                )
-            ]])
+            buttons = InlineKeyboardMarkup([
+                [InlineKeyboardButton('❗ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ɢᴇᴛ ғɪʟᴇ❗', url=f"https://t.me/{temp.U_NAME}?start=getfile-{base_name.replace(' ', '-')}")],
+                [InlineKeyboardButton('✨ᴍᴏᴠɪᴇ ʀᴇǫᴜᴇsᴛ ɢʀᴏᴜᴘ✨', url=f"https://t.me/Rk2x_Request")] # Naya Button
+            ])
             size=(2560, 1440) if LANDSCAPE_POSTER and TMDB_POSTER and movie_doc.get("is_backdrop") and not movie_doc.get("error_tmdb") else (853, 1280)
             if movie_doc.get("poster_url") and not LINK_PREVIEW:
                 resized_poster = await fetch_image(movie_doc["poster_url"], size)
@@ -422,12 +420,10 @@ async def update_movie_message(client, base_name):
             return
 
         text = generate_movie_message(movie_doc, base_name)
-        buttons = InlineKeyboardMarkup([[
-            InlineKeyboardButton(
-                'ɢᴇᴛ ғɪʟᴇs',
-                url=f"https://t.me/{temp.U_NAME}?start=getfile-{base_name.replace(' ', '-')}"
-            )
-        ]])
+        buttons = InlineKeyboardMarkup([
+                [InlineKeyboardButton('❗ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ɢᴇᴛ ғɪʟᴇ❗', url=f"https://t.me/{temp.U_NAME}?start=getfile-{base_name.replace(' ', '-')}")],
+                [InlineKeyboardButton('✨ᴍᴏᴠɪᴇ ʀᴇǫᴜᴇsᴛ ɢʀᴏᴜᴘ✨', url=f"https://t.me/Rk2x_Request")] # Naya Button
+            ])
 
         message_id = movie_doc.get("message_id")
         is_photo = movie_doc.get("is_photo", False)
