@@ -1177,14 +1177,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "start":
         buttons = [[
-                    InlineKeyboardButton('🔰 ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ 🔰', url=f'http://telegram.me/{temp.U_NAME}?startgroup=true')
-                ],[
-                    InlineKeyboardButton(' ʜᴇʟᴘ 📢', callback_data='help'),
-                    InlineKeyboardButton(' ᴀʙᴏᴜᴛ 📖', callback_data='about')
-                ],[
-                    InlineKeyboardButton('ᴛᴏᴘ sᴇᴀʀᴄʜɪɴɢ ⭐', callback_data="topsearch"),
-                     InlineKeyboardButton('ᴜᴘɢʀᴀᴅᴇ 🎟', callback_data="premium_info"),
-                ]]
+                        InlineKeyboardButton('⇄𝙰ᴅᴅ 𝙼ᴇ 𝚃ᴏ 𝚈ᴏᴜʀ 𝙶ʀᴏᴜᴘs⇄', url=f'http://t.me/{temp.U_NAME}?startgroup=true', style=enums.ButtonStyle.PRIMARY)
+                    ],[
+                        InlineKeyboardButton('⇉𝙳ᴇᴍᴏ 𝚂ᴇᴀʀᴄʜ⇇', callback_data='help', style=enums.ButtonStyle.DANGER),
+                        InlineKeyboardButton('⊵ 𝙰ʙᴏᴜᴛ ⊴', callback_data='about', style=enums.ButtonStyle.DANGER)
+                    ],[
+                        InlineKeyboardButton('⇌ 𝙼ᴏᴠɪᴇ 𝚁ᴇǫᴜᴇsᴛ 𝙶ʀᴏᴜᴘ ⇋', url="https://t.me/Rk2x_Request", style=enums.ButtonStyle.SUCCESS)
+                    ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         current_time = datetime.now(TZ)
         curr_time = current_time.hour
@@ -1254,9 +1253,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "about":
         buttons = [[
             InlineKeyboardButton('‼️ ᴅɪꜱᴄʟᴀɪᴍᴇʀ ‼️', callback_data='disclaimer'),
-            InlineKeyboardButton ('🪔 sᴏᴜʀᴄᴇ', callback_data='source'),
-        ],[
-            InlineKeyboardButton('ᴅᴏɴᴀᴛɪᴏɴ 💰', callback_data='donation'),
         ],[
             InlineKeyboardButton('⇋ ʙᴀᴄᴋ ᴛᴏ ʜᴏᴍᴇ ⇋', callback_data='start')
         ]]
